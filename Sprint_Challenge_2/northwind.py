@@ -63,3 +63,22 @@ ON Employee.id = EmployeeTerritory.EmployeeId
 ORDER BY count_territories DESC
 LIMIT 1;"""
 print("employee with the most territories\n", c.execute(top_employee_distinct_territories).fetchone())
+
+
+#terminal output:
+"""
+(lambdata) bash-3.2$ python northwind.py
+top 10 most expensive items
+ [('Côte de Blaye', 263.5), ('Thüringer Rostbratwurst', 123.79), ('Mishi Kobe Niku', 97), ("Sir Rodney's Marmalade", 81), ('Carnarvon Tigers', 62.5), ('Raclette Courdavault', 55), ('Manjimup Dried Apples', 53), ('Tarte au sucre', 49.3), ('Ipoh Coffee', 46), ('Rössle Sauerkraut', 45.6)]
+average age of employee at time of hiring
+ 37.22222222222222
+average employee age per city
+ [(29.0, 'Kirkland'), (32.5, 'London'), (56.0, 'Redmond'), (40.0, 'Seattle'), (40.0, 'Tacoma')]
+top 10 most expensive items and supplier
+ [('Côte de Blaye', 263.5, 'Aux joyeux ecclésiastiques'), ('Thüringer Rostbratwurst', 123.79, 'Plutzer Lebensmittelgroßmärkte AG'), ('Mishi Kobe Niku', 97, 'Tokyo Traders'), ("Sir Rodney's Marmalade", 81, 'Specialty Biscuits, Ltd.'), ('Carnarvon Tigers', 62.5, 'Pavlova, Ltd.'), ('Raclette Courdavault', 55, 'Gai pâturage'), ('Manjimup Dried Apples', 53, "G'day, Mate"), ('Tarte au sucre', 49.3, "Forêts d'érables"), ('Ipoh Coffee', 46, 'Leka Trading'), ('Rössle Sauerkraut', 45.6, 'Plutzer Lebensmittelgroßmärkte AG')]
+top category
+ [('Beverages', 77)]
+employee with the most territories
+ (1, 'Davolio', 'Nancy', 49)
+(lambdata) bash-3.2$ 
+"""

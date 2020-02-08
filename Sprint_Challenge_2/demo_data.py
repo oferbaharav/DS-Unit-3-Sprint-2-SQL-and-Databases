@@ -28,3 +28,12 @@ c.execute("SELECT count (*) FROM demo WHERE x>=5 AND y>=5").fetchone()[0])
 # How many unique values of `y` are there
 print("How many unique values of `y` are there",\
 c.execute("SELECT count (distinct y) FROM demo").fetchone()[0])
+
+#terminal output
+"""
+(lambdata) bash-3.2$ python demo_data.py
+Count how many rows you have - it should be 3! 3
+How many rows are there where both x and y are at least 5? 2
+How many unique values of `y` are there 2
+(lambdata) bash-3.2$ 
+"""
